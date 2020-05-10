@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { calculateCells, generateArray } from "./scripts.js";
 
-  let width;
+  $: width = 0;
 
   $: size = calculateCells(width);
 
