@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import GithubLink from "./GithubLink.svelte";
   import { calculateCells, generateArray } from "./scripts.js";
 
   $: width = window.innerWidth || 0;
@@ -110,6 +111,7 @@
 </style>
 
 <svelte:window bind:innerWidth={width} />
+<GithubLink />
 <div class="Grid" style="--size: {size}">
   {#each cells as row, y}
     {#each row as checked, x}
